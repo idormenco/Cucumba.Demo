@@ -19,7 +19,7 @@ namespace Cucumba.Specs.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class CalculatorDivideFeature : object, Xunit.IClassFixture<CalculatorDivideFeature.FixtureData>, System.IDisposable
+    public partial class PizzeriaFeature : object, Xunit.IClassFixture<PizzeriaFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Cucumba.Specs.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Division.feature"
+#line 1 "Pizza.feature"
 #line hidden
         
-        public CalculatorDivideFeature(CalculatorDivideFeature.FixtureData fixtureData, Cucumba_Specs_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public PizzeriaFeature(PizzeriaFeature.FixtureData fixtureData, Cucumba_Specs_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace Cucumba.Specs.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator divide", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("ro"), "Features", "Pizzeria", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,22 +80,15 @@ namespace Cucumba.Specs.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Division")]
-        [Xunit.TraitAttribute("FeatureTitle", "Calculator divide")]
-        [Xunit.TraitAttribute("Description", "Division")]
-        [Xunit.InlineDataAttribute("6", "3", "2", new string[0])]
-        [Xunit.InlineDataAttribute("8", "4", "2", new string[0])]
-        [Xunit.InlineDataAttribute("1", "1", "1", new string[0])]
-        [Xunit.InlineDataAttribute("15", "-3", "-5", new string[0])]
-        public void Division(string first, string second, string result, string[] exampleTags)
+        [Xunit.SkippableFactAttribute(DisplayName="Creare de pizza")]
+        [Xunit.TraitAttribute("FeatureTitle", "Pizzeria")]
+        [Xunit.TraitAttribute("Description", "Creare de pizza")]
+        public void CreareDePizza()
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("First", first);
-            argumentsOfScenario.Add("Second", second);
-            argumentsOfScenario.Add("Result", result);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Division", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creare de pizza", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -105,17 +98,29 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-    testRunner.Given(string.Format("the first number is {0}", first), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 5
-    testRunner.And(string.Format("the second number is {0}", second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("un creator de pizza", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Date fiind ");
 #line hidden
 #line 6
-    testRunner.When("the two numbers are divided", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("pun blat pufos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Si ");
 #line hidden
 #line 7
-    testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("pun sos de rosii", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Si ");
+#line hidden
+#line 8
+    testRunner.And("pun ananas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Si ");
+#line hidden
+#line 9
+    testRunner.And("pun peperoni", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Si ");
+#line hidden
+#line 10
+    testRunner.And("pun ceapa", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Si ");
+#line hidden
+#line 11
+    testRunner.When("o bag la cuptor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Cand ");
+#line hidden
+#line 12
+    testRunner.Then("obtin o pizza", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Atunci ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -128,12 +133,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                CalculatorDivideFeature.FeatureSetup();
+                PizzeriaFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                CalculatorDivideFeature.FeatureTearDown();
+                PizzeriaFeature.FeatureTearDown();
             }
         }
     }
