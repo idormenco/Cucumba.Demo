@@ -1,5 +1,4 @@
 ﻿using Cucumba.Demo.Calculator;
-
 var result = Dear.Calculator
     .Add(1)
     .Add(2)
